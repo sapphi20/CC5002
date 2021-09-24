@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./static/css/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="./static/css/bootstrap-4.6.0-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/custom.css" />
+    <link rel="stylesheet" href="./static/css/detail_img.css" />
+    <title>Comida con amor</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h3 id="titulo">Comida con amor</h3>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./formulario.html">Informar Evento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./listado_eventos.html"
+                >Listado de Eventos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./estadisticas.html">Estadísticas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5 mb-5">
+      <h3>Información del lugar</h3>
+      <ul>
+        <li>Región: Metropolitana</li>
+        <li>Comuna: Ñuñoa</li>
+        <li>Sector: Plaza Ñuñoa</li>
+      </ul>
+      <h3>Información del oferente</h3>
+      <ul>
+        <li>Nombre: Samus Aran</li>
+        <li>Email: samus@aran.com</li>
+        <li>Teléfono celular: 9748296109</li>
+        <li>Redes sociales:</li>
+        <ul>
+          <li>Twitter: @NintendoAmerica</li>
+          <li>Instagram: nintendo</li>
+        </ul>
+      </ul>
+      <h3>Información del evento</h3>
+      <ul>
+        <li>Día y hora de inicio: 2021-10-01 11:00</li>
+        <li>Día y hora de término: 2021-10-01 16:00</li>
+        <li>
+          Descripción: Deliciosa comida directo desde Japón, con todo el sabor
+          de la cultura nipona.
+        </li>
+        <li>Tipo: Japonesa</li>
+        <li>
+          Foto(s):
+          <div class="text-center">
+            <img alt="foto-bento" src="./static/img/bento-jeu-video-1.png" />
+            <img alt="foto-ramen-ponyo" src="./static/img/ponyo_ramen.jpg" />
+            <img
+              alt="foto-cafe-dragonball  "
+              src="./static/img/Dragon-Ball-Cafe-1.jpg"
+            />
+          </div>
+        </li>
+      </ul>
+
+      <div id="botones" class="text-center">
+        <button class="btn btn-secondary" type="button">
+          Volver a Listado de Eventos
+        </button>
+        <button class="btn btn-secondary" type="button">
+          Volver a Portada
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./static/js/functions.js"></script>
+</html>

@@ -1,0 +1,41 @@
+<html>
+  <meta charset="utf-8" />
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <title>Formulario</title>
+  <body>
+    <div id="titulo">
+      <h1>Uber de Encuestas</h1>
+    </div>
+    <div id="formulario">
+      <form method="post" action="">
+        Nombre:<input
+          name="nombre"
+          minlength="4"
+          maxlength="50"
+          placeholder="Escribe tu nombre"
+        /><br />
+        Dirección:
+        <input
+          name="direccion"
+          minlength="5"
+          placeholder="Escribe tu dirección"
+        /><br />
+        Tipo de encuesta:
+        <select name="tipo">
+          <option value="0">Pública</option>
+          <option value="1">Privada</option></select
+        ><br />
+        Comentarios:
+        <textarea
+          placeholder="Pon tus comentarios acá"
+          maxlength="1000"
+        ></textarea
+        ><br />
+        Foto de documentos: <input type="file" name="archivo" /><br />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>

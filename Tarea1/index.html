@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./static/css/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="./static/css/bootstrap-4.6.0-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/custom.css" />
+    <title>Comida con amor</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h3 id="titulo">Comida con amor</h3>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./formulario.html">Informar Evento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./listado_eventos.html"
+                >Listado de Eventos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./estadisticas.html">Estadísticas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5 mb-5">
+      <h2>Últimos eventos</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Fecha-hora inicio</th>
+            <th>Fecha-hora término</th>
+            <th>Comuna</th>
+            <th>Sector</th>
+            <th>Tipo</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2021-09-16 12:00</td>
+            <td>2021-09-16 16:00</td>
+            <td>Puerto Montt</td>
+            <td>Población Modelo</td>
+            <td>Pescados y mariscos</td>
+            <td>
+              <img
+                alt="merluza frita"
+                src="./static/img/pescado-frito.jpg"
+                width=200
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>2021-09-16 12:00</td>
+            <td>2021-09-16 16:00</td>
+            <td>Punta Arenas</td>
+            <td></td>
+            <td>Chilena: leche con plátano y choripán</td>
+            <td>
+              <img
+                alt="leche con platano y choripan"
+                src="static/img/IMG_20190906_135825.jpg"
+                width=200
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>2021-09-16 12:00</td>
+            <td>2021-09-16 16:00</td>
+            <td>Frutillar</td>
+            <td>Frutillar Bajo</td>
+            <td>Café y snacks: pastelería</td>
+            <td>
+              <img
+                alt="torta de frambuesa"
+                src="./static/img/IMG_20191109_144005.jpg"
+                width=200
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>2021-09-16 12:00</td>
+            <td>2021-09-16 16:00</td>
+            <td>Antofagasta</td>
+            <td></td>
+            <td>Nikkei</td>
+            <td>
+              <img
+                alt="aji de gallina roll"
+                src="./static/img/Ají-de-gallina-roll.jpg"
+                width=200
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>2021-09-16 12:00</td>
+            <td>2021-09-16 16:00</td>
+            <td>Lumaco</td>
+            <td>Capitán Pastene</td>
+            <td>Italiana: pastas</td>
+            <td>
+              <img
+                alt="plato de gnocchi"
+                src="./static/img/pexels-sebastian-coman-photography-3590401.jpg"
+                width=200
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./static/css/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="./static/css/bootstrap-4.6.0-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/custom.css" />
+    <title>Comida con amor</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h3 id="titulo">Comida con amor</h3>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./formulario.html">Informar Evento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./listado_eventos.html"
+                >Listado de Eventos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./estadisticas.html">Estadísticas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5 mb-5 text-center">
+      <div id="num_eventos">
+        <img
+          alt="grafico-numero-eventos"
+          src="./static/img/num_eventos.png"
+          width="65%"
+        />
+      </div>
+      <div id="tipo_eventos" class="mt-5">
+        <img
+          alt="grafico-tipo-eventos"
+          src="./static/img/tipo_eventos.png"
+          width="65%"
+        />
+      </div>
+    </div>
+  </body>
+</html>

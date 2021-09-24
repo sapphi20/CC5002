@@ -1,0 +1,15 @@
+#titulo{
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#formulario{
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    margin-left: 15%;
+    margin-right: 15%;
+}

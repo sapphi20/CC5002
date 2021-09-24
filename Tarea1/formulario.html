@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./static/css/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="./static/css/bootstrap-4.6.0-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/custom.css" />
+    <title>Comida con amor</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h3 id="titulo">Comida con amor</h3>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./formulario.html">Informar Evento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./listado_eventos.html"
+                >Listado de Eventos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./estadisticas.html">Estadísticas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Cuerpo de la página con el formulario -->
+    <div class="container mt-5 mb-5">
+      <form method="POST">
+        <h3>Información del lugar</h3>
+        <p>
+          Región
+          <select name="region" onchange="getRegion(this)">
+            <option value="def_region">Selecciona una región</option>
+            <option value="XV">Arica y Parinacota</option>
+            <option value="I">Tarapacá</option>
+            <option value="II">Antofagasta</option>
+            <option value="III">Atacama</option>
+            <option value="IV">Coquimbo</option>
+            <option value="V">Valparaíso</option>
+            <option value="MET">Metropolitana</option>
+            <option value="VI">O'Higgins</option>
+            <option value="VII">Maule</option>
+            <option value="XVI">Ñuble</option>
+            <option value="VIII">Biobío</option>
+            <option value="IX">Araucanía</option>
+            <option value="XIV">Los Ríos</option>
+            <option value="X">Los Lagos</option>
+            <option value="XI">Aysén</option>
+            <option value="XII">Magallanes</option>
+          </select>
+          <br />
+          Comuna:
+          <select name="comuna">
+            <option value="def_comuna">Selecciona una comuna</option>
+          </select>
+          <br />
+          Sector: <input name="sector" maxlength="100" />
+        </p>
+        <h3>Información del oferente</h3>
+        <p>
+          Nombre: <input name="nombre" /> <br />
+          Email: <input name="email" /> <br />
+          Teléfono celular:
+          <input name="celular" placeholder="Ej: 912345678" /> <br />
+          Redes sociales:
+          <select name="red-social" onchange="showSocialNet(this.value)">
+            <option value="def-network">Selecciona una red social</option>
+            <option value="twitter">Twitter</option>
+            <option value="ig">Instagram</option>
+            <option value="fb">Facebook</option>
+            <option value="tiktok">Tiktok</option>
+            <option value="otra">Otra</option></select
+          ><br />
+          <div id="twitter" hidden>
+            <input name="twitter" placeholder="Twitter"/><br />
+          </div>
+          <div id="ig" hidden>
+            <input name="ig" placeholder="Instagram"/><br />
+          </div>
+          <div id="fb" hidden>
+            <input name="fb" placeholder="Facebook"/><br />
+          </div>
+          <div id="tiktok" hidden>
+            <input name="tiktok" placeholder="Tiktok"/><br />
+          </div>
+          <div id="otra" hidden>
+            <input name="otra" placeholder="Otra" /><br />
+          </div>   
+        </p>
+        <h3>Información del evento</h3>
+        <p>
+          Día y hora de inicio: <input name="dia-hora-inicio" /><br />
+          Día y hora de término: <input name="dia-hora-termino" /><br />
+          Descripción: <textarea name="descripcion-evento"></textarea> <br />
+          Tipo:
+          <select name="tipo-comida">
+            <option value="def_tipo">Selecciona un tipo</option>
+            <option>Alemana</option>
+            <option>Al Paso</option>
+            <option>Árabe</option>
+            <option>Argentina</option>
+            <option>Asiática</option>
+            <option>Australiana</option>
+            <option>Brasileña</option>
+            <option>Café y Snacks</option>
+            <option>Carnes</option>
+            <option>Casera</option>
+            <option>Chilena</option>
+            <option>China</option>
+            <option>Cocina de Autor</option>
+            <option>Comida Rápida</option>
+            <option>Completos</option>
+            <option>Coreana</option>
+            <option>Cubana</option>
+            <option>Española</option>
+            <option>Exótica</option>
+            <option>Francesa</option>
+            <option>Gringa</option>
+            <option>Hamburguesa</option>
+            <option>Helados</option>
+            <option>India</option>
+            <option>Internacional</option>
+            <option>Italiana</option>
+            <option>Latinoamericana</option>
+            <option>Mediterránea</option>
+            <option>Mexicana</option>
+            <option>Nikkei</option>
+            <option>Parrillada</option>
+            <option>Peruana</option>
+            <option>Pescados y mariscos</option>
+            <option>Picoteos</option>
+            <option>Pizzas</option>
+            <option>Pollos y Pavos</option>
+            <option>Saludable</option>
+            <option>Sándwiches</option>
+            <option>Suiza</option>
+            <option>Japonesa</option>
+            <option>Sushi</option>
+            <option>Tapas</option>
+            <option>Thai</option>
+            <option>Vegana</option>
+            <option>Vegetariana</option></select
+          ><br />
+          Foto: <input type="file" name="foto-comida" />
+          <button class="btn"type="button" onclick="addPhoto()">Agregar otra foto</button>
+        </p>
+      </form>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="modal"
+        data-target="#exampleModal"
+        onclick="disableSend()"
+      >
+        Enviar información de este evento
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ¿Está seguro que desea agregar este evento?
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                No, quiero volver al formulario
+              </button>
+              <button
+              id="sendForm"
+                type="submit"
+                class="btn btn-primary"
+                onclick="acceptedForm()"
+              >
+                Sí, estoy seguro
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./static/js/functions.js"></script>
+  <script src="./static/js/initConfig.js"></script>
+</html>
