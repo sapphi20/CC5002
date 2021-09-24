@@ -510,7 +510,11 @@ const validateForm = () => {
   const inicio = $("[name='dia-hora-inicio']")[0];
   const termino = $("[name='dia-hora-termino']")[0];
   const tipo_comida = $("[name='tipo-comida']")[0];
+  const fotos = $("[name='foto-comida']");
 
+  if (nombre["value"] === "" || nombre["value"].length > 200) {
+    errors.push(nombre["name"]);
+  }
   if (email["value"] === "") {
     errors.push(email["name"]);
   } else if (email["value"] !== "" && checkEmail(email["value"]).length === 0) {
@@ -548,6 +552,18 @@ const validateForm = () => {
     errors.push(tipo_comida["name"]);
   }
 
+  if (fotos.length === 1 && fotos[0]["value"] === "") {
+    errors.push("foto (debe subir por lo menos una foto)");
+  }
+  for (let i = 0; i < fotos.length; i++) {
+    console.log(fotos[i]["value"]);
+    if (fotos[i]["value"] !== "") {
+      let fileArr = f["value"].split(".");
+      if (!["jpg", "jpeg", "png"].includes(fileArr[fileArr.length - 1])) {
+        errors.push("foto (formato no válido)");
+      }
+    }
+  }
   return errors;
 };
 
@@ -559,7 +575,7 @@ const disableSend = () => {
       fields +
       "\n" +
       "Así que no se pueden enviar los datos.";
-    
+    alert(msj);
     const modalBtn = document.getElementById("sendForm");
     modalBtn.disabled = true;
   }
